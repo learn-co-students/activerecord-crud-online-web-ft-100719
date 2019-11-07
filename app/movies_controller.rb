@@ -36,11 +36,11 @@ end
 
 
 def can_get_the_first_item_in_the_database
-  Movie.first.title
+  Movie.first
 end
 
 def can_get_the_last_item_in_the_database
-  _Movie.last.title
+  Movie.last
 end
 
 def can_get_size_of_the_database
@@ -48,7 +48,7 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  Movie.find(1).title
+  Movie.find(1)
 end
 
 def can_find_by_multiple_attributes
@@ -100,5 +100,5 @@ def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  ovie.destroy_all
+  Movie.destroy_all
 end
